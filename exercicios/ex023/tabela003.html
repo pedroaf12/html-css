@@ -8,18 +8,45 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
+
         td, th {
             border: 1px solid black;
             padding: 10px;
+        }
+    
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: antiquewhite;
         }
 
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        thead > tr> th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+
+
+        tbody > tr:nth-child(odd) { /* 2n-1 */
+            background-color: white;
+            
+        }
+
+        tbody > tr:nth-child(even) { /* 2n */
+            background-color: lightgrey;
         }
 
         .num {
@@ -41,15 +68,16 @@
     -->
     
     <table>
+        <caption>Polulação das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
