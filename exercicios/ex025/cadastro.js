@@ -1,15 +1,9 @@
-const formularioDeDados = document.getElementById('formulario');
-function obterDadosDaTela(){
-    const usuario = document.getElementById('iusuario').value;
-    const senha = document.getElementById('isenha').value
-    
-    return {
-        usuario,
-        senha
-        
-    }
-}
-formularioDeDados.addEventListener('submit', function(event){
+document.getElementById('formulario').addEventListener('submit', function(event) {
     event.preventDefault();
-    console.log(obterDadosDaTela());
-})
+
+    const user = document.getElementById('iusuario').value;
+    const key = document.getElementById('isenha').value;
+
+    // output.textContent = `Usuário ${user} e Senha ${key}`
+    console.log(user,key);
+});
