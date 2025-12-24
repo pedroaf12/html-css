@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+.caixa1 {
+    background-color: rebeccapurple;
+    border: 3px solid rebeccapurple;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: -2;
+}
+
+.caixa2 {
+    background-color: red;
+    border: 3px solid red;
+    grid-row-start: 2;
+    grid-row-end: -2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.caixa3 {
+    background-color: green;
+    border: 3px solid green;
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-start: 3;
+    grid-column-end: -1;
+}
