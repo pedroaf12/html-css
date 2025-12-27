@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+div.container {
+    border: 3px solid red;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+}
+
+/* Grid Area padrão: Indicar começo e fim */
+div.caixa {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+
+
+    grid-row-start: 1;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    border: 3px solid blue;
+}
+
+
+/* Grid Area com Span: Indicar começo e expansão */
+div.itemA {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: span 2;
+    grid-column-end: span 1;
+
+    background-color: pink;
+}
+
+/* Gris Area com shorthand */
+/* Gris-(row ou column): começo / fim */
+
+div.itemB {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    grid-row: 1 / span 2;
+    grid-column: 4 / 5;
+
+    background-color: aqua;
+}
+
+/* Grid Area: grid-area:; */
+/* row-start / column-start / row-end / column-end */
+div.itemC {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    grid-area: 3 / 3 / 4 / span 2;
+    background-color: chocolate;
+}
+
+
+
+
+
+
